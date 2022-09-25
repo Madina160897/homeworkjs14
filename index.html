@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input{
+        border: 1px solid #05975f;
+        width: 250px; 
+        height: 20px;
+    }
+    .bo{
+        border: 1px solid #05975f;
+        width: 50px; 
+        height: 30px;
+        background-color: #82c5ba;
+        cursor: pointer;
+    }
+    .r{
+        border-radius: 5px;
+    }
+    .w{
+        width: 250px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+</style>
+<body>
+    <!-- <div style="height: 100px; display: flex; flex-direction: column; justify-content: space-between;"> -->
+        <input id="num1" class="r">
+        <!-- <input id="num2" class="r">
+        <input id="result" class="r"> 
+    </div> -->
+    
+    <br>
+    <p></p>
+    <div class="w">
+        <button class="bo r" onclick="cl('1')">1</button>
+        <button class="bo r" onclick="cl('2')">2</button>
+        <button class="bo r" onclick="cl('3')">3</button>
+        <button class="bo r" onclick="cl('+')">+</button>
+    </div>
+
+    <p></p>
+    <div class="w">
+        <button class="bo r" onclick="cl('4')">4</button> 
+        <button class="bo r" onclick="cl('5')">5</button>
+        <button class="bo r" onclick="cl('6')">6</button>
+        <button class="bo r" onclick="cl('-')">-</button>
+    </div>
+
+    <p></p>
+    <div class="w">
+        <button class="bo r" onclick="cl('7')">7</button> 
+        <button class="bo r" onclick="cl('8')">8</button>
+        <button class="bo r" onclick="cl('9')">9</button>
+        <button class="bo r" onclick="cl('/')">/</button>
+    </div>
+
+    <p></p>
+    <div class="w">
+        <button class="bo r" onclick="cl('0')">0</button>
+        <button class="bo r" onclick="cal()">=</button>
+        <button class="bo r" onclick="cl('*')">*</button>
+    </div>
+    
+</body>
+<script>
+
+    let btn = document.querySelector("button");
+    let a = document.querySelector("#num1");
+    
+
+    function cl(params) {
+        a.value += params
+        console.log(params)
+    }
+    function cal() {
+        let b = a.value;
+        if(b){
+            a.value = eval(b)
+        }
+    }
+
+
+</script>
+</html>
